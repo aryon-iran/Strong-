@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>آریون: امپراتوری‌های قرون‌وسطا — نمونهٔ اولیه</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="proto">نمونهٔ اولیهٔ آفلاین و تک‌نفره — ذخیره‌سازی فقط در همین مرورگر است و چندنفره‌ای وجود ندارد.</div>
+<header>
+  <h1>آریون: امپراتوری‌های قرون‌وسطا<small>مرحلهٔ ۱: نمونهٔ محلی</small></h1>
+  <div class="res" id="res" aria-live="polite"></div>
+  <nav class="menu" aria-label="منوی بازی">
+    <button class="btn alt" id="mHelp">ویلیام</button>
+    <button class="btn alt" id="mHome">قلعهٔ من</button>
+    <button class="btn alt" id="mSave">ذخیره</button>
+    <button class="btn danger" id="mReset">شروع دوباره</button>
+  </nav>
+</header>
+<main>
+  <section class="mapwrap" aria-label="نقشهٔ راهبردی ایران">
+    <svg id="map" viewBox="0 0 1000 780" role="group" aria-label="نقشه"></svg>
+    <div class="zoom"><button class="btn alt" id="zIn" aria-label="بزرگ‌نمایی">+</button><button class="btn alt" id="zOut" aria-label="کوچک‌نمایی">−</button></div>
+    <div class="legend"><span style="background:var(--red)"></span>پایتخت <span style="background:var(--gold2);margin-inline-start:8px"></span>تصرف‌شده <span style="background:#c8b68a;margin-inline-start:8px"></span>بی‌صاحب <span style="background:#fff;border:3px solid var(--green);margin-inline-start:8px"></span>قابل تصرف (حاشیهٔ سبز)</div>
+  </section>
+  <aside>
+    <div class="tabs" role="tablist">
+      <button role="tab" data-tab="city" aria-selected="true">شهر</button>
+      <button role="tab" data-tab="build" aria-selected="false">قلعه</button>
+      <button role="tab" data-tab="log" aria-selected="false">گزارش</button>
+    </div>
+    <div class="pane" id="pane" role="tabpanel" tabindex="0"></div>
+  </aside>
+</main>
+<div id="toasts" aria-live="polite"></div>
+<button class="btn fab" id="fab" hidden>ویلیام</button>
+<div id="will" role="dialog" aria-label="ویلیام" hidden>
+  <div class="avatar" aria-hidden="true">و</div>
+  <div class="t"><strong>ویلیام، مشاور سلطنتی</strong><p id="wtext"></p>
+    <div class="row"><button class="btn" id="wNext">بعدی</button><button class="btn alt" id="wHide">بستن</button></div></div>
+</div>
+<dialog id="dlg"><p id="dlgText"></p><form method="dialog" style="display:flex;gap:8px"><button class="btn danger" value="ok">بله</button><button class="btn alt" value="no">انصراف</button></form></dialog>
+<noscript>برای اجرای بازی، جاوااسکریپت باید فعال باشد.</noscript>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
